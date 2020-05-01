@@ -1,0 +1,437 @@
+@font-face {
+  font-family: "Alpha_kids";
+  src: url("./alpha_kids/AlphaKids-Regular.ttf");
+}
+@font-face {
+  font-family: "Supernova";
+  src: url("./supernova_2/Supernova.ttf");
+}
+@font-face {
+  font-family: "keep_calm";
+  src: url("./keep_calm/KeepCalm-Medium.ttf");
+}
+
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #f0e5d6;
+	margin-top: 0px;
+	margin-left: 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+header{
+	padding: 20px 0px 0px 20px;
+	width: 100%;
+	height: 250px;
+	background-color: #f0e5d6;
+	position: fixed;
+	z-index: 1000;
+}
+
+footer{
+	margin-top: 10px;
+	width: 100%;
+	background-color: #f0e5d6;
+	position: fixed;
+}
+
+#pgo{
+	text-align:center;
+	border-radius:25px;
+	width:90px;
+	border:2px solid black;
+	margin:0px;
+	padding:10px 0px 5px 0px;
+	cursor:pointer;
+}
+
+#pgo:hover{
+	color: #f0e5d6;
+	background-color: #000;
+}
+
+#allmighty:hover{
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+#tab_recherche { 
+	width: 75%;
+	margin: auto;
+	margin-top: 50px;
+	font-family: keep_calm;
+}
+
+#tab_couleur { 
+	width: 30%;
+	height: 30px;
+	text-align: center;
+	margin: auto;
+	margin-top: 20px;
+	font-family: keep_calm;
+	font-size: 90%;
+}
+
+#bleuc:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #594CD8;
+}
+
+#orangec:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #FFA770;
+}
+
+#rosec:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #F16BC2;
+}
+
+#vertc:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #2FBD5A;
+}
+
+#marronc:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #D37B35;
+}
+
+#jaunec:hover { 
+	cursor: pointer;
+	font-size: 130%;
+	color: #FFE040;
+}
+
+.grey {
+	text-align:center;
+	margin:auto;
+	width:25px;
+	font-weight: normal;
+	color: #CCCCCC;
+}
+
+.colourb {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #2618B1;
+	font-size: 130%;
+}
+
+.colouro {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #FF8940;
+	font-size: 130%;
+}
+
+.colourr {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #E23BA7;
+	font-size: 130%;
+}
+
+.colourv {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #007B25;
+	font-size: 130%;
+}
+
+.colourm {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #A64A00;
+	font-size: 130%;
+}
+
+.colourj {
+	text-align:center;
+	width:25px;
+	margin:auto;
+	color: #FFD600;
+	font-size: 120%;
+}
+
+#tab_recherche_s{ 
+	width: 75%;
+	margin: auto;
+	margin-top: 10px;
+	font-family: keep_calm;
+}
+
+#recherche3, #recherche2{
+	width: auto;
+	margin: 0px 10px 10px 0px;
+	height: 25px;
+	font-family: Arial, Verdana, sans-serif;
+	font-family: keep_calm;
+}
+
+#recherche2 td{
+	font-family: keep_calm;
+}
+
+input[type='text']{
+	font-size: 130%;
+}
+
+.lien_about{
+	width:150px;
+	color: #000;
+	cursor: pointer;
+	margin: 0px 0px 10px 25px;
+	font-weight: normal;
+	font-size: 120%;
+	font-family: keep_calm;
+}
+
+.raw_about{
+	width:150px;
+	text-align: right;
+	color: #000;
+	margin: 0px 0px 10px 25px;
+	font-weight: normal;
+	font-size: 120%;
+	font-family: keep_calm;
+}
+
+.lien_about:hover{
+	cursor: pointer;
+}
+
+.lien_highlight{
+	text-decoration: underline;
+	color: #000;
+	cursor: pointer;
+	margin: 0px 0px 10px 25px;
+	font-size: 120%;
+	font-family: keep_calm;
+}
+
+#keylist{
+	padding-top: 220px;
+}
+
+.key{
+	font-family: Arial, Verdana, sans-serif;
+	width: auto;
+}
+
+.keyF{
+	background-color: #f0e5d6;
+	padding: 0px 0px 0px 20px;
+	font-family: Arial, Verdana, sans-serif;
+	width: auto;
+}
+
+.keyFi{
+	background-color: #f8f1e9;
+	padding: 0px 0px 0px 20px;
+	font-family: Arial, Verdana, sans-serif;
+	width: auto;
+}
+
+.keyG{
+	font-family: Arial, Verdana, sans-serif;
+	width: auto;
+}
+
+.nature{
+	font-family: keep_calm;
+	position: relative;
+	margin: auto;
+	width: 900px;
+	font-style: normal;
+	color: #000;
+	font-weight: bold;
+	font-size: 1.6em;
+	padding: 30px 0px 0px 0px;
+	text-align: center;
+}
+
+.question{
+	position: relative;
+	margin: auto;
+	width: 900px;
+	font-style: italic;
+	color: #000;
+	font-weight: normal;
+	font-size: 32px;
+	padding: 20px 0px 0px 0px;
+	text-align: justify;
+}
+
+.reponse{
+	position: relative;
+	margin: auto;
+	margin-top: 35px;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #000;
+	font-weight: normal;
+	font-size: 32px;
+	padding: 15px 15px 15px 15px;
+	text-align: center;
+	border-radius:25px;
+	border:2px solid black;
+	color: #f0e5d6;
+	background-color: #000;
+}
+
+.signature{
+	position: relative;
+	margin: auto;
+	width: 900px;
+	color: #000;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 1.5em;
+	text-align: right;
+	padding: 30px 0px 50px 0px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#click_cross {
+	text-align: left;
+	font-family: Arial, Verdana, sans-serif;
+	font-style: italic;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #9c7846;
+}
+
+ul{
+	margin-left: 30px;
+}
+
+li{
+	margin-top: 5px;
+	text-align: justify;
+	padding: 0px 10px 0px 30px;
+}
+
+.image{
+	text-align: center;
+}
+
+.border{
+	border: 1px solid #000;
+}
+
+.reference{
+	color: #000;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 80%;
+	float: right;
+}
+
+#avant_result{
+	padding-left: 50px;
+}
+
+.oufguedin{ 
+	width: 75%;
+	font-family: Arial, Verdana, sans-serif;
+	font-style: italic;
+	color: #9c7846;
+	font-weight: bold;
+	margin-top: 0px;
+	display: inline;
+}
+
+#textos{
+	font-family: Arial, Verdana, sans-serif;
+	font-style: italic;
+	color: #9c7846;
+	font-weight: bold;
+	margin-top: 0px;
+}
+
+#notice{
+	margin: 0px;
+	width: auto;
+}
+.titre{
+	margin: 50px 0px 30px 0px;
+	font-family: Alpha_kids;
+	color: #000;
+	font-size: 125px;
+	text-align: center;
+	padding: 0px 0px 20px 0px;
+}
+
+.corps{
+	margin: auto;
+	width: 1000px;
+	font-family: Supernova;
+	font-style: italic;
+	color: #000;
+	font-weight: bold;
+	font-size: 46px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+}
+
+.cestparti{
+	margin: auto;
+	width: 280px;
+	font-family: Supernova;
+	font-style: italic;
+	color: #000;
+	font-weight: bold;
+	font-size: 46px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	cursor:pointer;
+	border-radius:25px;
+	border: 2px solid black;
+}
+
+.cestparti2{
+	margin: auto;
+	width: 280px;
+	font-family: Supernova;
+	color: #f0e5d6;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 46px;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	cursor:pointer;
+	border-radius:25px;
+	border: 2px solid black;
+	background-color: #000;
+}
+
+.equation{
+	font-size: 40px;
+}
+
+em{
+	cursor: pointer;
+	font-size: 1em;
+	font-style: normal;
+}
