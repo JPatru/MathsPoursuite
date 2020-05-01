@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Maths Poursuite</title>
+		<link rel="stylesheet" href="./style/style.css" type="text/css" />
+		<script type="text/javascript" src="./scripts/jquery.js"></script>
+		<script type="text/javascript" src="./scripts/jquery-ui.js"></script>
+		<script type="text/javascript" src="./scripts/moteur_recherche.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+
+    <body>
+		<header>
+			<div id="notice">
+				<p class="titre">MATHS POURSUITE</p>
+				<p class="corps" style="margin-bottom:20px;">Bonne nouvelle !</br>Vous allez jouer à Maths Poursuite !</p>
+				<p class="corps" style="margin-bottom:15px;font-size:28px;">Maths Poursuite est un jeu pédagogique conçu par une équipe de quatre professeurs de maths et leurs élèves dans le but de faciliter les révisions de toute la classe en jouant à la manière d'un Trivial Pursuit<sup style="font-size:16px;">TM</sup>.</p>
+				<p class="corps" style="margin-bottom:25px;font-size:28px;">Il peut être joué en classe en constituant des équipes d'élèves</br>ou de manière simplifiée lors d'activités de révision. Les questions ont été rédigées par des élèves et sont classées par niveau de difficulté et thématique.</p>
+				<p id="cestparti" class="cestparti" style="cursor:pointer;border-radius:25px;width:280px;border: 2px solid black;">C'est parti</p>
+			</div>
+			<table id="tab_recherche">
+				<tr id="tab_recherche1">
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:200px;" id="random_card" status="checked"><p id="random" style="text-align:left; margin:0px;">Carte aléatoire : <em id="checkcase">&#x1F5F9;</em></p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:200px;" id="6eme" status="checked"><p id="6emerandom" style="text-align:left; margin:0px;padding-left: 20px;">Niveau 6<sup>ème</sup> : <em id="6checkcase">&#x1F5F9;</em></p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:200px;" id="4eme" status="checked"><p id="4emerandom" style="text-align:left; margin:0px;padding-left: 20px;">Niveau 4<sup>ème</sup> : <em id="4checkcase">&#x1F5F9;</em></p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.5em;" id="go"><p id="pgo">GO !</p></td>
+					<td style="background-color: #f0e5d6; font-size: 2.5em; font-family: Alpha_kids;" id="allmighty"><p style="cursor:pointer;text-align:right;margin:0px;">MATHS POURSUITE</p></td>
+				</tr>
+			</table>
+			<table id="tab_couleur">
+				<tr>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="bleu" status="checked"><p id="bleuc" class="colourb" title="Espace et Géométrie">&#11042;</p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="orange" status="checked"><p id="orangec" class="colouro" title="Nombres et calculs, Algèbre">&#11042;</p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="rose" status="checked"><p id="rosec" class="colourr" title="Organisation et gestion de données, Statistiques, Probabilités">&#11042;</p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="vert" status="checked"><p id="vertc" class="colourv" title="Grandeurs et Mesures">&#11042;</p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="marron" status="checked"><p id="marronc" class="colourm" title="Maths appliquées aux Sciences et Algorithmique">&#11042;</p></td>
+					<td style="background-color: #f0e5d6; font-size: 1.2em;width:100px;" id="jaune" status="checked"><p id="jaunec" class="colourj" title="Autres thèmes">&#11042;</p></td>
+				</tr>
+			</table>
+			<div id="tab_recherche_s">
+				<table>
+					<tr id="tab_recherche2">
+						<td style="background-color: #f0e5d6;width:450px;"><input style="width:450px;" id="recherche" value="Entrer un mot clé pour effectuer une recherche" type="text"></td>
+						<td style="background-color: #f0e5d6;"><!--<img style="cursor: pointer; padding: 0px; margin-top: -4px" id="reinit" src="./images/refresh.png"/>--></td>
+						<td style="background-color: #f0e5d6;" id="top"><div title="haut de page" style="cursor: pointer; margin: 0px 0px 10px 25px; font-weight: bold; font-size: 160%;">&uarr;</div></td>
+					</tr>
+					<tr id="tab_recherche3">
+						<td style="background-color: #f0e5d6;width:450px;" id="tab_cross"><input id="recherche2" style="width:450px;" value="Entrer un mot clé pour effectuer une recherche" type="text"></td>
+						<td style="background-color: #f0e5d6;" id="click_cross"><!--<p id="cross_search">recherche croisée</p>--></td>
+						<td style="background-color: #f0e5d6;"></td>
+						<td style="background-color: #f0e5d6;" class='' id="top2"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="result"></div>
+		</header>
+		<section id="line" style="width: 100%; height: 1px; position: fixed; margin: 270px 0px 0px -20px; background-image:url(./images/header.png); background-repeat:repeat; z-index:500;" ><p></p></section>
+
+		<section id="keylist" style="text-align: left;"><br/>
+		
+			
+<!------------------------------------------------ Maths Poursuite / Sixième / Nombres ------------------------------------------------>
+			<div about="nombres" year="sixième" check="nok" id="">			
+				<div order="" class="key">
+					<p class="nature">&#9733; Nombres et Calculs &#9733;</p>
+					<p keywords="" class="question" state="?"></p>
+					<div class="reponse"></div>
+					<p class="signature">M a t h s&nbsp;&nbsp;&nbsp;P o u r s u i t e - 6<sup>ème</sup></p>
+				</div>
+			</div>
+			
+<!------------------------------------------------ Maths Poursuite / Sixième / Gestion de Données ------------------------------------------------>
+			
+			<div about="données" year="sixième" check="nok" id="">		
+				<div order="" class="key">
+					<p class="nature">&#9733; Gestion de Données &#9733;</p>
+					<p keywords="" class="question" state="?"></p>
+					<div class="reponse"></div>
+					<p class="signature">M a t h s&nbsp;&nbsp;&nbsp;P o u r s u i t e - 6<sup>ème</sup></p>
+				</div>
+			</div>
+			
+<!------------------------------------------------ Maths Poursuite / Sixième / Grandeurs et Mesures ------------------------------------------------>
+			
+			<div about="grandeurs" year="sixième" check="nok" id="">			
+				<div order="" class="key">
+					<p class="nature">&#9733; Grandeurs et Mesures &#9733;</p>
+					<p keywords="" class="question" state="?"></p>
+					<p class="reponse"></p>
+					<p class="signature">M a t h s&nbsp;&nbsp;&nbsp;P o u r s u i t e - 6<sup>ème</sup></p>
+				</div>				
+			</div>
+			
+<!------------------------------------------------ Maths Poursuite / Sixième / Geométrie ------------------------------------------------>
+			
+			<div about="géométrie" year="sixième" check="nok" id="">
+				<div order="" class="key">
+					<p class="nature">&#9733; Géométrie &#9733;</p>
+					<p keywords="" class="question" state="?"></p>
+					<p class="reponse"></p>
+					<p class="signature">M a t h s&nbsp;&nbsp;&nbsp;P o u r s u i t e - 6<sup>ème</sup></p>
+				</div>				
+			</div>
+
+<!------------------------------------------------ Maths Poursuite / Sixième / Autres ------------------------------------------------>
+
+			<div about="autres" year="sixième" check="nok" id="">
+				<div order="" class="key">
+					<p class="nature">&#9733; Divers &#9733;</p>
+					<p keywords="" class="question" state="?"></p>
+					<p class="reponse"></p>
+					<p class="signature">M a t h s&nbsp;&nbsp;&nbsp;P o u r s u i t e - 6<sup>ème</sup></p>
+				</div>				
+			</div>
+						
+			
+		</section>
+	
+	<footer>
+		<p id="textos"></p>	<!-- bloc vide qui recevra les messages d'informations tel que pas de résultats -->
+	</footer>
+	
+    </body>
+</html>
+
+
+
