@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Alpha_kids";
-  src: url("./alpha_kids/AlphaKids-Regular.ttf");
+  src: url("./AlphaKids-Regular.ttf");
 }
 @font-face {
   font-family: "Supernova";
-  src: url("./supernova_2/Supernova.ttf");
+  src: url("./Supernova.ttf");
 }
 @font-face {
   font-family: "keep_calm";
-  src: url("./keep_calm/KeepCalm-Medium.ttf");
+  src: url("./KeepCalm-Medium.ttf");
 }
 
 html {
